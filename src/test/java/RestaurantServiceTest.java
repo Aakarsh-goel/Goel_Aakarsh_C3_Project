@@ -65,4 +65,11 @@ class RestaurantServiceTest {
         assertEquals(initialNumberOfRestaurants + 1, service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    // >>>>>>>>>>>>>>>>>>>>DISPLAY TOTAL COST OF SELECTED ITEMS<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void display_total_cost_of_selected_items_from_menu() {
+        fail("initial tdd step--- test case fail");
+    }
 }
