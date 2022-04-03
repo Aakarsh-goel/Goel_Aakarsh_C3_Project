@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.*;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -70,6 +72,13 @@ class RestaurantServiceTest {
     // >>>>>>>>>>>>>>>>>>>>DISPLAY TOTAL COST OF SELECTED ITEMS<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
     public void display_total_cost_of_selected_items_from_menu() {
-        fail("initial tdd step--- test case fail");
+        restaurant.addToMenu("Americano Pizzeria", 469);
+        List<Item> selectedItems = new ArrayList<>();
+        selectedItems.add(restaurant.findItemByName("Americano Pizzeria"));
+        selectedItems.add(restaurant.findItemByName("Sweet corn soup"));
+        int calculatedCost = service.displayTotalCost(selectedItems);
+        int expectedCost = 119 + 469;
+        assertEquals(expectedCost,calculatedCost);
+
     }
 }
